@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int totbal,totrun,runsco,balbow;
+        totbal=s.nextInt();
+        totrun=s.nextInt();
+        runsco=s.nextInt();
+        balbow=s.nextInt();
+        int over=totbal/6;
+        float overfin=((int)(balbow/6))+(float)(balbow%6)/10;
+        float currunrat=(float)runsco/overfin;
+        String rounded = String.format("%.1f", currunrat);
+        float totrunrat=(float)totrun/over;
+        String rou = String.format("%.1f", totrunrat);
+        System.out.println(over);
+        System.out.println(overfin);
+        System.out.println(rounded);
+        System.out.println(rou);
+        if(currunrat>=totrunrat)
+            System.out.print("Eligible to Win");
+        else
+           System.out.print("Not Eligible to Win"); 
+        
+    }
+}
